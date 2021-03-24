@@ -11,7 +11,7 @@
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					{% if filter %}
+					{% if filter or pizza %}
 					<li><a href="/" class="smoothScroll">HOME</a></li>
 					<li><a href="{% url 'menu' %}" class="smoothScroll">MENU</a></li>
 					{% else %}
