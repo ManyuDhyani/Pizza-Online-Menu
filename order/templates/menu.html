@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="container">
+            <form action="" method="get" class="form-control">
+                <div class='col-md-12'>
+                    {% for field in filter.form %}
+                        {{ field|as_crispy_field }}
+                    {% endfor %}
+
+                <input class="btn btn-primary" type="submit" />
+                </div>
+            </form>
+			<div class="row top-buffer" style="margin-top:20px;">
+				<div class="col-md-12">
+                        <h2 class="text-center text-uppercase">Pizza Menu</h2>
+                        <hr>
+                    </div>
+                    {% for result in filter.qs %}
+                    <div class="col-md-4 col-sm-4">
+                        <div class="gallery-wrapper">
+                            <img src="{{ result.pizza.thumbnail.url }}" class="img-responsive gallery-img" alt="Pizza 1">
+                            <div class="gallery-des">
+                                <h3>{{ result.pizza.name }}<small>-({{ result.size.size }})</small></h3>
+                                <h5>{{ result.pizza.description }}</h5>
+                                <a href="{{result.pizza.get_absolute_url}}" class="btn btn-primary">View Pizza</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+            </div>
+    </div>
+
+{% endblock content %}

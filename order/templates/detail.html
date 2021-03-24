@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>asgggsgggg</h1><br>
+    <div class="col-md-12">
+        <h2 class="text-center text-uppercase">{{pizza.name}}</h2>
+        <hr>
+            <div class="gallery-wrapper">
+                <img src="{{ pizza.thumbnail.url }}" class="img-responsive gallery-img" alt="Pizza 1">
+            </div>
+        <h3>{{ pizza.description }}</h3>
+        <h5></h5>
+
+
+    <table class="table table-dark" style="color: white;">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Size</th>
+          <th scope="col">Price</th>
+          <th scope="col">Category</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for p in prize %}
+        <tr>
+          <th scope="row">{{forloop.counter}}</th>
+          <td>{{p.prize.prize}}</td>
+          <td>{{p.size.size}}</td>
+          <td>{{p.category.name}}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    </div>
+</div>
+{% endblock content %}

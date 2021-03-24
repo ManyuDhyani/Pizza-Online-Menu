@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+	<!-- start flexslider -->
+		{% include 'slider.html' %}
+	<!-- end flexslider -->
+
+	<!-- start about -->
+	<section id="about" class="templatemo-section templatemo-top-130">
+		{% include 'about.html' %}
+	</section>
+	<!-- end about -->
+
+	<!-- start gallery -->
+	<section id="gallery" class="templatemo-section templatemo-light-gray-bg">
+		{% include 'gallery.html' %}
+	</section>
+	<!-- end gallery -->
+
+	<!-- start contact -->
+	<section id="contact" class="templatemo-section">
+		{% include 'contact.html' %}
+	</section>
+	<!-- end contact -->
+{% endblock content %}

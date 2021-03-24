@@ -1,0 +1,30 @@
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="text-center text-uppercase">Gallery</h2>
+					<hr>
+				</div>
+				{% for pizza in gallery %}
+				<div class="col-md-4 col-sm-4">
+					<div class="gallery-wrapper">
+						<img src="{{ pizza.thumbnail.url }}" class="img-responsive gallery-img" alt="Pizza 1">
+						<div class="gallery-des">
+							<h3>{{ pizza.name }} </h3>
+							<h5>{{ pizza.description }}</h5>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+				{% for pizza in offer %}
+				<div class="col-md-6 col-sm-6">
+					<div class="gallery-wrapper">
+						<img src="{{ pizza.thumbnail.url }}" class="img-responsive gallery-img" alt="Pizza 4">
+						<div class="gallery-des">
+							<h3>{{ pizza.name }}</h3>
+							<h5>{{ pizza.description }}</h5>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>

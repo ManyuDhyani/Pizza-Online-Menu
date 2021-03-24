@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+        {% include 'head.html' %}
+
+        <body id="home" data-spy="scroll" data-target=".navbar-collapse">
+            {% include 'navbar.html' %}
+
+            {% block content %}
+            {% endblock content %}
+        
+            {% include 'footer.html' %}
+            {% include 'scripts.html' %}
+        </body>
+</html>
