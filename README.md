@@ -2,6 +2,8 @@
 
 This is a website for online Pizza Menu. The landing page has the "About Us" information, Pizza gallery, contact info and inquiry message box. The inquiry is send directly to the owner through SMTP server. The owner can receive in his/her opted mail services.
 
+**Note:** To make the mail services work add a EMAIL_HOST_USER and EMAIL_HOST_PASSWORD in the settings.py file in Pizza folder.
+
 The page below shows the navbar and "About us" Div in desktop web browser.
 
 ![](Readme%20Images/home.png)
