@@ -10,7 +10,7 @@ The page below shows the navbar and "About us" Div in desktop web browser.
 
 The 3 Images shown below are the content of the landing page in potrait mode of the desktop. The content you see appears in the same order of the images as one scroll through the page.
 
-![](Readme%20Images/home2.png)
+![](Readme%20Images/aboutus.png)
 ![](Readme%20Images/gallery.png)
 ![](Readme%20Images/contact.png)
 
